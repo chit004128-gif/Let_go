@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Product Admin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Product Admin</h1>
+
+  <section id="form-section">
+    <h2>Add / Edit Product</h2>
+    <form id="product-form">
+      <input type="hidden" id="product-id">
+      <div><label>Name: <input type="text" id="name"></label></div>
+      <div><label>Price: <input type="number" id="price" step="0.01"></label></div>
+      <div><label>Affiliate Code: <input type="text" id="affiliate"></label></div>
+      <div><label>Image: <input type="file" id="image"></label></div>
+      <img id="preview" style="max-width:150px; display:none;" />
+      <button type="submit">Save</button>
+    </form>
+  </section>
+
+  <section id="import-export">
+    <h2>Import / Export</h2>
+    <input type="file" id="import-file">
+    <button id="import-btn" type="button">Import CSV</button>
+    <button id="export-btn" type="button">Export CSV</button>
+  </section>
+
+  <section id="list-section">
+    <h2>Products</h2>
+    <input type="text" id="search" placeholder="Search...">
+    <select id="sort">
+      <option value="">Sort by</option>
+      <option value="name">Name</option>
+      <option value="price">Price</option>
+    </select>
+    <table id="products-table" border="1">
+      <thead>
+        <tr><th>Name</th><th>Price</th><th>Affiliate</th><th>Image</th><th>Status</th><th>Actions</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
